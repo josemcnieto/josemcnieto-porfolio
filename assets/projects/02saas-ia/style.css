@@ -1,5 +1,9 @@
 /* CSS PROYECTO SAAS */
+<<<<<<< HEAD
 /* 1.RESETEO Y BASES */
+=======
+/* 1. RESETEO Y BASES */
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +11,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+<<<<<<< HEAD
 /* 2.LAYOUT PRINCIPAL (Flexbox)  */
 .app-container{
     display: flex;  /*Ponemos Sidebar y chat en fila*/
@@ -23,6 +28,23 @@
     display: flex;
     flex-direction: column; /*Los elementos del menu van*/
     justify-content: space-between;  /*Logo arriba,perfil abajo*/
+=======
+/* 2. LAYOUT PRINCIPAL (Flexbox)*/
+.app-container{
+    display: flex; /*Ponemos Sidebar y chat en fila*/
+    height: 100vh; /*Ocupar el 100% de la altura de la ventana*/
+    overflow: hidden; /*Evita que la web entera haga scroll*/
+}
+
+/* 3. SIDEBAR (Barra lateral) */
+.sidebar{
+    width: 260px; /*Ancho fijo para el menú */
+    background-color: #202123; /*Color oscuro tipo CHATGPT*/
+    color: white;
+    display: flex;
+    flex-direction: column; /*Los elementos del menú van*/
+    justify-content: space-between; /*Logo arriba, perfil abajo*/
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b
     padding: 15px;
 }
 
@@ -38,14 +60,21 @@
 }
 
 .historial ul {
+<<<<<<< HEAD
     margin: 10px;
     padding-left: 20px;
 } 
+=======
+    margin-top: 10px;
+    padding-left: 20px;
+}
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b
 
 .historial li {
     margin-bottom: 8px;
 }
 
+<<<<<<< HEAD
 /* 4.AREA DE CHAT (Zona Central) */
 .chat-area{
     flex-grow: 1;   /*ocupa todo el espacio restante de la pantalla*/
@@ -96,19 +125,79 @@
     flex-direction: column;
     /* flex-start: colocar elementos al inicio del contenedor */
     justify-content: flex-start; 
+=======
+/* 4. AREA DE CHAT (Zona Central) */
+
+.chat-area{
+    flex-grow: 1; /*Ocupa TODO el espacio restante de la pantalla*/
+    display: flex;
+    flex-direction: column; /*Cabecera arriba, mensajes centro, input abajo*/
+    background-color: #343541;
+}
+
+.chat-header{
+    padding: 15px;
+    border-bottom: 1px solid #4d4d4f;
+    color: #ececf1;
+    text-align: center;
+}
+
+.controles-filtros {
+    text-align: center;
+    padding: 10px;
+    background-color: #202123;
+    border-bottom: 1px solid #4d4d4f;
+
+}
+
+.controles-filtros button {
+    background: #444654;
+    color: white;
+    border: 1px solid #565869;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.controles-filtros button:hover {
+    background-color: #565869;
+}
+
+
+/* Modificamos el mensajes-container
+    - mensajes uno debajo del otro
+    - scroll vertical
+    - simulación real de chat
+*/
+.mensajes-container {
+    flex-grow: 1; /*Mensajes ocupan el centro*/
+    padding: 20px 40px;
+    display: flex;
+    /* Se agrega el flex-direction : column por ser chat */
+    flex-direction: column;
+    /*flex-start : cololar elementos al inicio del contenedor*/
+    justify-content: flex-start;
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b
     /*strech los elementos ocupan el ancho disponible*/
     align-items: stretch;
     overflow-y: auto;
 }
 
+<<<<<<< HEAD
 /* burbujas */
 .msg-usuario, .msg-ia{
+=======
+/*BURBUJAS*/
+.msg-usuario, .msg-ia {
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 15px;
     max-width: 80%;
     width: fit-content;
     line-height: 1.5;
+<<<<<<< HEAD
     transition: all  0.3s  ease;
 }
 /* la burbuja de usuario se alinea a la derecha */
@@ -119,20 +208,40 @@
 }
 /* se alinea a la izquierda */
 .msg-ia{
+=======
+    transition: all 0.3s ease;
+}
+
+/* La Burbuja de usuario se alinea a la derecha */
+.msg-usuario {
+    background-color: #19c37d ;
+    color: white;
+    align-self: flex-end;
+}
+/*Se alinea a la izquierda*/
+.msg-ia {
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b
     background-color: #444654;
     color: #d1d1d1;
     align-self: flex-start;
 }
 
 
+<<<<<<< HEAD
 /*5.FORMULARIO DE ENTRADA(input)*/
 .input-area{
     padding: 20px 40px;
 
+=======
+/*5. FORMULARIO DE ENTRADA (input)*/
+.input-area{
+    padding: 20px 40px;
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b
 }
 
 .chat-form{
     max-width: 700px;
+<<<<<<< HEAD
     margin: 0 auto;/*Centra el formulario en el medio*/
     display: flex; /*ekl input y el botton en fila*/
     background-color: #40414f;
@@ -151,6 +260,28 @@
     font-size: 1rem;
 }
 .chat-form button{
+=======
+    margin: 0 auto; /*Centra el formulario en el medio*/
+    display: flex;/*El input y el boton en fila*/
+    background-color: #40414f;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.chat-form input {
+    flex-grow: 1; /* El input estira todo lo que puede*/
+    background-color: transparent;
+    border: none; /*Sin borde*/
+    color: white;
+    padding: 10px;
+    outline: none; /*Quita el borde azul al hacer click*/
+    /*Aumentamos el tamño de la letra del input*/
+    font-size: 1rem;
+}
+
+.chat-form button {
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b
     background-color: #19c37d;
     color: white;
     border: none;
@@ -159,6 +290,7 @@
     cursor: pointer;
     transition: 0.3s;
 }
+<<<<<<< HEAD
 .chat-form button :hover{
     opacity: 0.9;
 }
@@ -185,6 +317,39 @@
 }
 
 .buscador-container input{
+=======
+
+.chat-form button:hover {
+    opacity: 0.9;
+}
+/* sr-only ocultar elemente visualmente sin eliminarlo HTML */
+.sr-only {
+    /*position absolute - para mover libremente top left bottom etc*/
+    position: absolute;
+    /*Mueve muy lejos a la izquierda*/
+    left: -9999px;
+}
+
+/*Boton Peligro (Borrar)*/
+.controles-filtros .btn-peligro {
+    background-color: #e74c3c;
+    border: 1px solid #c0392b;
+}
+
+.controles-filtros .btn-peligro:hover {
+    background-color: #c0392b;
+}
+
+/*Boton Buscador  */
+.buscador-container {
+    text-align: center;
+    padding: 10px;
+    background-color: #202123;
+    border-bottom: 1px solid #4d4d4f;
+}
+
+.buscador-container input {
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b
     padding: 8px 15px;
     border-radius: 4px;
     border: none;
@@ -192,9 +357,15 @@
     max-width: 400px;
     outline: none;
     font-size: 0.95rem;
+<<<<<<< HEAD
 
 }
 .buscador-container button{
+=======
+}
+
+.buscador-container button {
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b
     background-color: #19c37d;
     color: white;
     border: none;
@@ -204,6 +375,7 @@
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
+<<<<<<< HEAD
 
 }
 
@@ -249,3 +421,59 @@
     }
 }
 
+=======
+}
+.buscador-container button:hover {
+    opacity: 0.9;
+}
+
+/*MAGIA RESPONSIVE - ADAPTANDO EL CHAT A MÓVILES*/
+
+/*Si la pantalla es de tamaño tablet
+o móvil (menos de 768px)
+*/
+@media (max-width: 768px){
+    /*1. Ocultanos menu lateral*/
+    .sidebar {
+        /*Hace de que la barra 
+        desaparezca*/
+        display: none;
+    }
+    /*2. Damos mas espacio al texto del chat*/
+    .mensajes-container{
+        /*Reducir el padding*/
+        padding: 20px;
+    }
+    /*3. Ajustamos el formulario para que
+    quepa bien en pantallas estrechas*/
+    .input-area{
+        padding: 15px;
+    }
+    .chat-form {
+        padding: 5px;
+    }
+
+    .chat-form input{
+        font-size: 0.9rem; /*letra mas pequeña*/
+    }
+    .chat-form button{
+        padding: 8px 12px;/*boton mas compacto*/
+    }
+}
+
+@media (max-width:480px) {
+    .chat-header h3 {
+        font-size: 1.1rem; /*Achicamos el titulo superior*/
+    }
+
+    .msg-usuario, .msg-ia {
+        max-width: 90%;
+        font-size: 0.95rem;
+    }
+
+}
+
+
+
+
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b

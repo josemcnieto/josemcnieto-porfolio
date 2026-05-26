@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi IA SaaS - Panel de Control</title>
     <link rel="stylesheet" href="style.css" />
+<<<<<<< HEAD
     <!-- Relacionamos con el fichero app.js para que cargue junto al html -->
+=======
+    <!-- Relacionamos con el fichero app.js DEFER para que cargue junto al html -->
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b
     <script src="app.js" defer></script>
 
   </head>
@@ -38,6 +42,7 @@
                 <h3>Conversación Actual</h3>
             </header>
 
+<<<<<<< HEAD
           <!--Agregar botones .... y el id="caja-mensajes" -->
           <div class="controles-filtro">
             <button onclick="mostrarTodo()"> Ver Todo</button>
@@ -71,10 +76,46 @@
                      autocomplete="off"
                      >
                     <!-- Añadir tipo submit -->
+=======
+            <!-- AGREGAR BOTONES  -->
+            <div class="controles-filtros">
+                <button onclick="mostrarTodo()"> Ver Todo</button>
+                <button onclick="verMisMensajes()">Mis Mensajes</button>
+                <button onclick="modoGritar()">Modo Mayúsculas</button>
+                <button onclick="borrarChat()" class="btn-peligro">🗑️ Borrar Chat</button>
+            </div>
+            <div class="buscador-container">
+                <input type="text" id="input-buscador" placeholder="Buscar palabra en el chat...">
+                <button onclick="buscarMensaje()">🔍 Buscar</button>
+            </div>
+            <!-- Eliminar el mensaje Hola ..... y el id="caja-mensajes" -->
+            <section class="mensajes-container" id="caja-mensajes"></section>
+
+            <footer class="input-area">
+                <!-- Evento Form señade la función enviarPrompt -->
+                <form class="chat-form" onsubmit="enviarPrompt(event)">
+                
+                <!-- for="mensaje-input" // sr-only = Solo para lectores de pantalla -->
+                
+                <label for="mensaje-input" class="sr-only">Mensaje</label>
+                
+                
+                <!-- Añadir ID -->
+                    <input 
+                        type="text" 
+                        id="mensaje-input" 
+                        placeholder="Escribe tu pregunta aqui ..."
+                        autocomplete="off" >
+                <!-- Añadir tipo submit -->
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b
                     <button type="submit">Enviar</button>
                 </form>
             </footer>
         </main>
     </div>
   </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> a86a84127bd37606733b1b0f705b2a434013449b

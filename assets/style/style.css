@@ -1,0 +1,286 @@
+:root {
+    --lighting-color: #0089b7;
+    --dark-color: #003d62;
+    --darker-color: #003251;
+    --secondary-color: #fff700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/* 62.5% = 10px
+    FACILITA TRABAJAR CON REM
+    1 rem = 10px
+    2 rem = 20px
+*/
+
+html {
+    font-size: 62.5%;
+}
+/*CONFIGURAR BODY HTML*/
+body, html {
+    /*Scroll suave*/
+    scroll-behavior: smooth;
+    color: white;
+    /*Espaciado vertical entre lineas*/
+    line-height: 1.4;
+}
+/*Tamaño base del texto*/
+body {
+    font-size: 1.6rem;
+}
+/*CONTAINER*/
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+/*LINKS*/
+a {
+    text-decoration: none;
+    color: white;
+}
+ul {
+    list-style: none;
+}
+
+header {
+    /*Header pegajoso*/
+    position: sticky;
+    top: 0;
+    /*Prioridad sobre otros elementos*/
+    z-index: 100;
+    background: var(--lighting-color);
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+/*Lista del menú*/
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav li {
+    font-size: 1.8rem;
+    /*Linea invisible inicialemente*/
+    border-bottom: 0.3rem transparent solid;
+    /*Transición suave*/
+    transition: 0.3s ease-in-out;
+}
+
+nav li:hover {
+    /*Línea amarilla al pasar el mouse*/
+    border-bottom: 0.3rem var(--secondary-color) solid;
+}
+
+.logo {
+    /*Tamaño grande*/
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+/*HERO SECTION*/
+
+#hero {
+    background: var(--dark-color);
+    /*Altura mínima pantalla completa*/
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid var(--lighting-color);
+}
+
+#hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}
+
+/*Contenedor de la imagen*/
+.hero_image {
+    /*Ocupa mismo espacio flexible*/
+    flex: 1;
+}
+
+.hero_image img {
+    /*Responsive*/
+    width: 100%;
+    max-width: 450px;
+    /*Border redondeados*/
+    border-radius: 1rem;
+    display: block;
+    /*Proporción cuadrada*/
+    aspect-ratio: 1/1;
+    /*Recorte elegante*/
+    object-fit: cover;
+}
+
+/*Contenido texto*/
+.hero_content {
+    flex: 1;
+}
+
+#hero h1 {
+    font-size: 4rem;
+}
+/*texto HI*/
+.hi_text {
+    color: var(--secondary-color);
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+.name_text {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+/*Subtítulo animado*/
+#hero h2 {
+    font-size: 3.5rem;
+    margin-top: 2rem;
+    /*Oculta el texto sobrante*/
+    overflow: hidden;
+    /*Evita salto línea*/
+    white-space: nowrap;
+    /*Cursor typing*/
+    border-right: 3px solid orange;
+    /*Empieza invisible*/
+    width: 0;
+    /*Animaciones*/
+    animation: 
+        typing 4s steps(30, end) forwards,
+        blink 0.8s infinite;
+}
+
+/*ANIMATION TYPING*/
+
+@keyframes typing {
+    from {
+        /*Empieza oculto*/
+        width: 0;
+    }
+    to {
+        /*termina visible*/
+        width: 100%;
+    }
+}
+
+/*Cursor parpadeante*/
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/*PROJECT SECTION*/
+#project {
+    background-color: var(--darker-color);
+    padding: 6rem 2rem;
+}
+
+#project h2 {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 5rem;
+}
+/*Grid de proyectos*/
+.project_container {
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+/*Cada item*/
+.grid_item {
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    width: 100%;
+    max-width: 350px;
+    overflow: hidden;
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover img {
+    opacity: 0.7;
+}
+
+
+.card_content {
+    background: white;
+    color: var(--dark-color);
+    padding: 2rem;
+    text-align: center;
+}
+/* contact section */
+#contact{
+    background-color: var(--dark-color);
+    padding: 8rem 2rem;
+}
+#contact h2 {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 5rem;
+
+}
+.top_contact{
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fit, minmax(220px, 1fr));
+        gap: 3rem;
+}
+.contact_way{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: 0.3s ease-out;
+}
+.contact_way:hover{
+    background: var(--lighting-color);
+    transform: translateY(-5px);
+
+}
+.contact_way i{
+    font-size: 3rem;
+}
+.contact_way h3{
+    font-size: 2rem;
+   
+}
+footer {
+    background: black;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.6rem;
+    
+}
